@@ -1,0 +1,15 @@
+version: '2'
+services:
+  frontendapp:
+    container_name: docker-springboot-frontend
+    image: shopapp-frontend
+    build: .
+    network_mode: shop_default
+    environment:
+     - production:false
+     - BASE_URL:'http://localhost:8080/'
+    ports:
+      - 4200:4200
+
+
+
